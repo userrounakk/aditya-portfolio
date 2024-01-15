@@ -18,7 +18,22 @@
 
 body {
   background-color: #1f1f1f;
+  position: relative;
 }
+
+@media (max-width: 1024px){
+  body{
+    position: static;
+  }
+}
+
+.ball{
+  background-color: white;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+}
+
 
 div{
   background-color: #1f1f1f;

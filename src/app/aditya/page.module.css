@@ -1,3 +1,12 @@
-.container{
-    
+.fixedElement{
+    position: fixed;
+    top: 4.3rem;
+    left: 2.2rem;
 }
+
+.anotherFixed{
+    position: fixed;
+    top: 15rem;
+    right: 3.6rem;
+}
+

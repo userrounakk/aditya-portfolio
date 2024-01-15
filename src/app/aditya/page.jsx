@@ -1,30 +1,43 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { use, useEffect } from 'react'
 import { useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import styles from '@/app/aditya/page.module.css'
+import { ScrollTrigger } from 'gsap/all'
 
 
 const Home = () => {
 
   const media = ['/insta.svg', '/git.svg', '/linkedin.svg']
+  const element = ['/home1.svg', '/person.svg', '/work.svg', '/service.svg', '/interest.svg', '/port.svg', '/chat.svg', '/mail1.svg']
 
   const imageRef = useRef(null);
 
+  const imageProject = useRef(null);
+  
+  // const containerFixed = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger)
+
   useEffect (() => { 
     const t1 = gsap.to(imageRef.current, {rotate: 360, repeat: -1, ease: 'power1.inOut'})
+    const t2 = gsap.to(imageProject.current, {rotate: 360, duration: 4, repeat: -1, yoyo: true})
 
-    return () => {
-      t1.kill()
-    }
   }, [])
 
   return (
-    <div className='pt-[5rem]'>
-      <div className='w-[80%] h-[60rem] mx-auto  relative'>
-        <div className='border border-[#666666] -top-[1rem] -left-[7rem] absolute h-[40rem] w-[20rem] rounded-3xl flex flex-col space-y-[1.5rem] items-center'>
+    <>
+    <div className='h-screen w-screen bg-black z-[10000] flex justify-center items-center hidden'>
+      <img src="/pre.gif" alt="" />
+    </div>
+    <div className='pt-[5rem] h-screen w-screen'>
+      <div className={`border border-[#666666] h-[40rem] w-[20rem] rounded-3xl flex flex-col space-y-[1.5rem] items-center relative xl:fixed xl:top-[4.3rem] xl:left-[2.2rem] z-[9999] max-xl:w-[48rem] max-xl:mx-auto`}>
+      <div className='border border-[#666666] py-[0.7rem] px-[0.7rem] rounded-full absolute max-xl:-right-[13rem] max-xl:-top-[0.1rem] xl:hidden'>
+        <Image src='/double.svg' alt='double line' height={30} width={30}/>
+        </div>
+          <Image ref={imageRef} src="gear.svg" alt="a gear icon" width={25} height={25} className={`fixed top-[2.4rem] left-[1.7rem] bg-[#1f1f1f] w-[2rem]`}/>
           <div className='flex justify-between mt-[2rem] w-[80%] mx-auto h-[3rem] items-center'>
               <p className='font-bold text-[2.3rem] text-white '>Aditya</p>
               <p className='w-[45%] leading-tight text-end text-white text-[13px]'>Full Stack Web Developer</p>
@@ -41,15 +54,66 @@ const Home = () => {
             )
             )}
           </ul>
-
           <button className='button bg-green-400 px-[4rem] py-[0.8rem] flex space-x-[1rem] rounded-3xl'>
             <Image src='/mail.svg' alt='a mail icon' height={20} width={25}/>
             <p>CONTACT ME!</p>
           </button>
         </div>
-        <Image ref={imageRef} src="gear.svg" alt="a gear icon" width={25} height={25} className={`absolute -top-[1rem] -left-[7.5rem] bg-[#1f1f1f] w-[2rem]`}/>
+
+
+
+        <div>
+          <ul className={`xl:fixed xl:top-[15rem] xl:right-[3.6rem] flex flex-col space-y-4 border-[0.08rem] border-[#666666] rounded-3xl px-[0.8rem] py-[1rem] max-xl:hidden`}>
+            {element.map((list) => (
+              <li><Image src={list} alt='link icon' height={22} width={22} style={{fill: '#666666'}}/></li>
+            ))}
+          </ul>
+        </div>
+
+
+      <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[60%] max-xl:mt-[3rem]'>
+        <div className='border border-[#666666] py-[0.7rem] px-[0.7rem] rounded-full absolute xl:-right-[5.5rem] max-xl:hidden'>
+        <Image src='/double.svg' alt='double line' height={30} width={30}/>
+        </div>
+
+
+      
+        <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]'>
+          <div className='flex flex-col space-y-[2.5rem]'>
+            <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]'> 
+              <Image src='/home.svg' alt='home image' height={30} width={18}/>
+              <p>Introduce</p>
+          
+            </div>
+
+            <div>
+              <p className={`text-white text-[78px] leading-tight`}>Say Hi from <span className='text-green-400'>Aditya</span>, Full Stack Developer</p>
+            </div>
+
+            <div>
+              <p className='text-[#999999] w-[60%]'>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
+            </div>
+
+            <div className='border border-[#666666] rounded-[70rem] h-[12rem] w-[12rem] mx-[70%] relative'>
+                <Image src='/round-text.png' alt='rounded-text' height={30} width={160} className='absolute top-[0.7rem] left-[1rem]' ref={imageProject}/>
+                <Image src='/down.svg' alt='down arrow' height={90} width={40} className='absolute top-[5rem] left-[4.6rem]'/>
+            </div>  
+
+            <div className='flex w-[40%] justify-between'>
+              <div className="flex flex-col justify-between">
+              <p className='text-green-400 text-[60px]'>1+</p>
+              <p className='text-[#666666]'>YEARS OF EXPERIENCE</p>
+              </div>
+              <div className="flex flex-col justify-between">
+              <p className='text-green-400 text-[60px]'>10+</p>
+              <p className='text-[#666666]'>PROJECTS COMPLETED</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    </>
   )
 }
 
