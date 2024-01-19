@@ -1,17 +1,29 @@
-import React, { useEffect } from 'react'
+'use client'
+
+import React from 'react'
 import Image from 'next/image'
 import { useRef } from 'react'
+import gsap from 'gsap'
+import { useEffect } from 'react'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const Home = () => {
 
+  
+  const imageRef = useRef(null)
+  const imageProject = useRef(null)
+  const media = ['/insta.svg', '/git.svg', '/linkedin.svg']
+  const element = ['/home1.svg', '/person.svg', '/work.svg', '/service.svg', '/interest.svg', '/port.svg', '/chat.svg', '/mail1.svg']
+
+  useEffect(() => {
+    const t1 = gsap.to(imageRef.current, {rotate: 360, repeat: -1, ease: 'power1.inOut'})
+    const t2 = gsap.to(imageProject.current, {rotate: 360, duration: 4, repeat: -1, yoyo: true})
+  }, [])
 
 
 
   return (
-    <div>
-        <div className='h-screen w-screen bg-black z-[10000] flex justify-center items-center hidden'>
-      <img src="/pre.gif" alt="" />
-    </div>
+
     <div className='pt-[5rem] h-screen w-screen'>
       <div className={`border border-[#666666] h-[40rem] w-[20rem] rounded-3xl flex flex-col space-y-[1.5rem] items-center relative xl:fixed xl:top-[4.3rem] xl:left-[2.2rem] z-[9999] max-xl:w-[48rem] max-xl:mx-auto`}>
       <div className='border border-[#666666] py-[0.7rem] px-[0.7rem] rounded-full absolute max-xl:-right-[13rem] max-xl:-top-[0.1rem] xl:hidden'>
@@ -92,8 +104,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-    </div>
     </div>
   )
 }
