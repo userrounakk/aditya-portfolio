@@ -50,7 +50,7 @@ const Portfolio = () => {
 
   return (
     <>
-        <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[60%] max-xl:mt-[3rem]'>
+        <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[75%] max-xl:mt-[3rem]'>
             <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]'>
               <div className='flex flex-col'>
                 <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]' ref={resumeIcon}> 
@@ -64,7 +64,7 @@ const Portfolio = () => {
                   <div>
                     <div className="relative mt-[1rem]" ref={firstPort}>
                     <Image src='/portfolio1.jpg' height={900} width={900} alt='project 1' className='rounded-3xl'/>
-                    <ul className='absolute top-[23rem] left-[1rem] space-x-[1rem] flex items-center'>
+                    <ul className='absolute top-[23rem] left-[1rem] space-x-[1rem] flex items-center max-xl:top-[75%]'>
                       <Button props='Figma'/>
                       <Button props='Framer'/>
                       <Button props='Wordpress'/>
@@ -75,10 +75,9 @@ const Portfolio = () => {
                   </div>  
                   
                 <div>
-                  
                   <div className="relative mt-[1rem]" ref={secondPort}>
-                  <Image src='/portfolio4.jpg' height={900} width={900} alt='project 1' className='rounded-3xl '/>
-                    <ul className='absolute top-[23rem] left-[1rem] space-x-[1rem] flex items-center'>
+                  <Image src='/portfolio1.jpg' height={900} width={900} alt='project 1' className='rounded-3xl '/>
+                    <ul className='absolute top-[23rem] left-[1rem] space-x-[1rem] flex items-center max-xl:top-[55%]'>
                       <Button props='Figma'/>
                       <Button props='React'/>
                     </ul>
@@ -88,12 +87,12 @@ const Portfolio = () => {
                 </div>
                   
                   <div>
-                  <div className='relative mt-[1rem]' ref={thirdPort}>
-                    <Image src='/portfolio5.jpg' height={900} width={900} alt='project 1' className='rounded-3xl'/>
-                    <ul className='absolute top-[23rem] left-[1rem] space-x-[1rem] flex items-center'>
-                      <Button props='Framer'/>
-                    </ul>
-                  </div>
+                    <div className='relative mt-[1rem]' ref={thirdPort}>
+                      <Image src='/portfolio1.jpg' height={900} width={900} alt='project 1' className='rounded-3xl'/>
+                      <ul className='absolute top-[23rem] left-[1rem] space-x-[1rem] flex items-center max-xl:top-[75%]'>
+                        <Button props='Framer'/>
+                      </ul>
+                    </div>
                   
                    
                     <p className='text-[30px] text-green-400 mt-[1.5rem]'>Lewis Portfolio Framer Template</p>

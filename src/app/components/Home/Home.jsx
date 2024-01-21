@@ -9,6 +9,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const Home = () => {
 
+  // const currentDate = new Date().toLocaleDateString();
+
   
   const imageRef = useRef(null)
   const imageProject = useRef(null)
@@ -16,8 +18,8 @@ const Home = () => {
   const element = ['/home1.svg', '/person.svg', '/work.svg', '/service.svg', '/interest.svg', '/port.svg', '/chat.svg', '/mail1.svg']
 
   useEffect(() => {
-    const t1 = gsap.to(imageRef.current, {rotate: 360, repeat: -1, ease: 'power1.inOut'})
-    const t2 = gsap.to(imageProject.current, {rotate: 360, duration: 4, repeat: -1, yoyo: true})
+    gsap.to(imageRef.current, {rotate: 360, repeat: -1, ease: 'power1.inOut'})
+    gsap.to(imageProject.current, {rotate: 360, duration: 4, repeat: -1, yoyo: true})
   }, [])
 
 
@@ -25,8 +27,8 @@ const Home = () => {
   return (
 
     <div className='pt-[5rem] h-screen w-screen'>
-      <div className={`border border-[#666666] h-[40rem] w-[20rem] rounded-3xl flex flex-col space-y-[1.5rem] items-center relative xl:fixed xl:top-[4.3rem] xl:left-[2.2rem] z-[9999] max-xl:w-[48rem] max-xl:mx-auto`}>
-      <div className='border border-[#666666] py-[0.7rem] px-[0.7rem] rounded-full absolute max-xl:-right-[13rem] max-xl:-top-[0.1rem] xl:hidden'>
+      <div className={`border border-[#666666] h-[40rem] w-[20rem] rounded-3xl flex flex-col space-y-[1.5rem] items-center relative xl:fixed xl:top-[4.3rem] xl:left-[2.2rem] z-[9999] max-xl:w-[75%] max-xl:mx-auto`}>
+      <div className='border border-[#666666] py-[0.7rem] px-[0.7rem] rounded-full absolute max-xl:-right-[14%] max-xl:-top-[0.1rem] xl:hidden'>
         <Image src='/double.svg' alt='double line' height={30} width={30}/>
         </div>
           <Image ref={imageRef} src="gear.svg" alt="a gear icon" width={25} height={25} className={`fixed top-[2.4rem] left-[1.7rem] bg-[#1f1f1f] w-[2rem]`}/>
@@ -41,8 +43,8 @@ const Home = () => {
           <p className='text-zinc-500 text-[14px] text-center'>©️ 2024 Aditya. All Rights Reserved</p>
 
           <ul className='flex justify-between w-[70%]'>
-            {media.map((icon) => (
-              <li><Image src={icon} alt='media icon' height={30} width={30}/></li>
+            {media.map((icon, index) => (
+              <li key={index}><Image src={icon} alt='media icon' height={30} width={30}/></li>
             )
             )}
           </ul>
@@ -56,21 +58,21 @@ const Home = () => {
 
         <div>
           <ul className={`xl:fixed xl:top-[15rem] xl:right-[2.2rem] flex flex-col space-y-4 border-[0.08rem] border-[#666666] rounded-3xl px-[0.8rem] py-[1rem] max-xl:hidden`}>
-            {element.map((list) => (
-              <li><Image src={list} alt='link icon' height={22} width={22} style={{fill: '#666666'}}/></li>
+            {element.map((list, index) => (
+              <li key={index}><Image src={list} alt='link icon' height={22} width={22} style={{ fill: '#ffffff' }} /></li>
             ))}
           </ul>
         </div>
 
 
-      <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[60%] max-xl:mt-[3rem]'>
+      <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[75%] max-xl:mt-[3rem]'>
         <div className='border border-[#666666] py-[0.7rem] px-[0.7rem] rounded-full absolute xl:-right-[7rem] max-xl:hidden'>
         <Image src='/double.svg' alt='double line' height={30} width={30}/>
         </div>
 
 
       
-        <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]'>
+        <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem]'>
           <div className='flex flex-col space-y-[2.5rem]'>
             <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]'> 
               <Image src='/home.svg' alt='home image' height={30} width={18}/>

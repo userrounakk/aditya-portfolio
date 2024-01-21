@@ -32,7 +32,7 @@ const About = () => {
 
   return (
     <>
-      <div className='xl:w-[80%] h-[35rem] mx-auto relative max-xl:w-[60%] mt-[8rem]'>  
+      <div className='xl:w-[80%] h-[35rem] mx-auto relative max-xl:w-[75%] mt-[8rem] max-xl:mt-[60rem]'>  
       <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]' >
         <div className='flex flex-col space-y-[2.5rem]'>
             <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]'  ref={aboutSection}> 

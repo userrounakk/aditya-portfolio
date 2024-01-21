@@ -3,19 +3,9 @@
 @tailwind utilities;
 
 
-
 body {
   background-color: #1f1f1f;
+  overflow-x: hidden;
   position: relative;
 }
 
-.ball{
-  background-color: white;
-  border-radius: 50%;
-  height: 5rem;
-  width: 5rem;
-}
-
-div{
-  background-color: #1f1f1f;
-}

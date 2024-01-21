@@ -53,7 +53,7 @@ const Service = () => {
 
   return (
     <>
-        <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[60%] max-xl:mt-[3rem]'>
+        <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[70%] max-xl:mt-[3rem]'>
         <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]'>
         <div className='flex flex-col'>
             <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]' ref={resumeIcon}> 
@@ -64,7 +64,7 @@ const Service = () => {
 <span className='text-green-400'> Specializations</span></p>
 
 {special.map((data, index) => (
-            <div className='border border-[#666666] rounded-2xl flex flex-col text-white py-[2.5rem] px-[2.5rem] mb-[1rem]' ref={containerRef[index]}>
+            <div key={index} className='border border-[#666666] rounded-2xl flex flex-col text-white py-[2.5rem] px-[2.5rem] mb-[1rem]' ref={containerRef[index]}>
 
               
                 <div className='flex justify-between'>
