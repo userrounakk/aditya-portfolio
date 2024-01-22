@@ -17,17 +17,17 @@ const Skills = () => {
     useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
-        const animateContainer = (container, number) => {gsap.set(container, {opacity: 0, y: 200})
-        gsap.to(container,  { y: 0, opacity: 1, duration: 2, delay: {number}, scrollTrigger: {
-        trigger: container, 
-        start: 'top-=120 bottom', 
-        end: 'top-=120 bottom',
-        toggleActions: 'play reverse none reset'
-      }})}
+    const animateContainer = (container, number) => {gsap.set(container, {opacity: 0, y: 200})
+    gsap.to(container,  { y: 0, opacity: 1, duration: 2, delay: {number}, scrollTrigger: {
+    trigger: container, 
+    start: 'top-=120 bottom', 
+    end: 'top-=120 bottom', 
+    toggleActions: 'play none none reset'
+  }})}
 
-         
-      animateContainer(resumeIcon.current, 1)
-      animateContainer(resumeTitle.current, 2)
+     
+  animateContainer(resumeIcon.current, 1)
+  animateContainer(resumeTitle.current, 2)
 
    
       gsap.set(reactRef.current, {opacity: 0, x: -400})

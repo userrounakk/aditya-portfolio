@@ -36,7 +36,7 @@ const Home = () => {
       <div className='border border-[#666666] py-[0.7rem] px-[0.7rem] rounded-full absolute max-xl:-right-[14%] max-xl:-top-[0.1rem] xl:hidden'>
         <Image src='/double.svg' alt='double line' height={30} width={30}/>
         </div>
-          <Image ref={imageRef} src="gear.svg" alt="a gear icon" width={25} height={25} className={`fixed top-[2.4rem] left-[1.7rem] bg-[#1f1f1f]`}/>
+          <Image ref={imageRef} src="gear.svg" alt="a gear icon" width={25} height={25} priority className={`fixed top-[2.4rem] left-[1.7rem] bg-[#1f1f1f]`}/>
           <div className='flex justify-between mt-[2rem] w-[80%] mx-auto h-[3rem] items-center'>
               <p className='font-bold text-[2.3rem] text-white '>Aditya</p>
               <p className='w-[45%] leading-tight text-end text-white text-[13px]'>Full Stack Web Developer</p>
@@ -99,7 +99,7 @@ Welcome to my portfolio! I'm passionate about creating innovative solutions that
             </div>
 
             <div className='border border-[#666666] rounded-[70rem] h-[12rem] w-[12rem] mx-[70%] relative'>
-                <Image src='/round-text.png' alt='rounded-text' height={30} width={160} className='absolute top-[0.7rem] left-[1rem] w-auto h-auto' ref={imageProject}/>
+                <Image src='/round-text.png' alt='rounded-text' height={40} width={160} className='absolute top-[0.7rem] left-[1rem] w-auto h-auto' ref={imageProject}/>
                 <Image src='/down.svg' alt='down arrow' height={90} width={40} className='absolute top-[5rem] left-[4.6rem] w-auto h-auto'/>
             </div>  
 
