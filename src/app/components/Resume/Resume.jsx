@@ -12,9 +12,11 @@ const Resume = () => {
     const resumeTitle = useRef(null) 
     const present = useRef(null)
   const second = useRef(null)
-  gsap.registerPlugin(ScrollTrigger)
+
 
     useEffect(() => {
+
+      gsap.registerPlugin(ScrollTrigger)
 
         const animateContainer = (container, number) => {gsap.set(container, {opacity: 0, y: 200})
         gsap.to(container,  { y: 0, opacity: 1, duration: 2, delay: {number}, scrollTrigger: {
@@ -49,8 +51,8 @@ const Resume = () => {
       <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[75%] max-xl:mt-[3rem]'>
         <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]'>
         <div className='flex flex-col'>
-            <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]' ref={resumeIcon}> 
-              <Image src='/work.svg' alt='home image' height={30} width={18}/>
+            <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem] max-lg:text-[14px]' ref={resumeIcon}> 
+              <Image src='/work.svg' alt='home image' height={30} width={18} className='w-auto h-auto'/>
               <p>Resume</p>
             </div>
 
@@ -65,9 +67,10 @@ const Resume = () => {
 
                 <div className='text-[#c0c0c0] flex flex-col space-y-5' ref={present}>
                   <p> 2023-Present </p>
-                  <p className='text-white text-[28px] font-light'>Full Stack Web Development</p>
                   <p className='text-white text-[28px] font-light'>Machine Learning Algorithm</p>
+                  <p className='text-white text-[28px] font-light'>Go</p>
                   <p className='text-white text-[28px] font-light'>Docker & Kubernetes</p>
+
                 </div>
               
               </div>
@@ -80,6 +83,7 @@ const Resume = () => {
 
                 <div className='text-[#c0c0c0] flex flex-col space-y-5 -mt-[0.4rem]' ref={second}>
                   <p> 2022-2023 </p>
+                  <p className='text-white text-[28px] font-light'>Full Stack Web Development</p>
                   <p className='text-white text-[28px] font-light'>Data Structure and Algorithm</p>
                   <p className='text-white text-[28px] font-light'>Python</p>
                   <p className='text-white text-[28px] font-light'>C++</p> 

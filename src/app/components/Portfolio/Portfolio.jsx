@@ -12,12 +12,13 @@ const Portfolio = () => {
     const thirdPort = useRef(null)
     const resumeIcon = useRef(null)
     const resumeTitle = useRef(null) 
-    gsap.registerPlugin(ScrollTrigger)
 
     useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
         const animateSkill = (container) => {
             gsap.set(container, {opacity: 0, y: 200})
-            const t5 = gsap.to(container, {y: 0, opacity: 1, duaration: 2, scrollTrigger: {
+            const t5 = gsap.to(container, {y: 0, opacity: 1, duration: 2, scrollTrigger: {
               trigger: container, 
               start: 'top-=120 bottom', 
               end: 'top-=120 bottom', 
@@ -54,7 +55,7 @@ const Portfolio = () => {
             <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]'>
               <div className='flex flex-col'>
                 <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]' ref={resumeIcon}> 
-                  <Image src='/work.svg' alt='home image' height={30} width={18}/>
+                  <Image src='/work.svg' alt='home image' height={30} width={18} className='h-auto w-auto'/>
                   <p>Portfolio</p>
                 </div>
                 <p className={`text-white text-[50px] leading-tight mt-[2.5rem]`} ref={resumeTitle}>Featured  

@@ -17,6 +17,9 @@ const config: Config = {
         'tablet': '1023px'
       }
     },
+    variants: {
+      fill: ['hover', 'focus'],
+    }
   },
   plugins: [],
 }

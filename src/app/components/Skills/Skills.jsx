@@ -6,7 +6,6 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const Skills = () => {
-    gsap.registerPlugin(ScrollTrigger)
 
     const resumeIcon = useRef(null)
     const resumeTitle = useRef(null) 
@@ -16,12 +15,14 @@ const Skills = () => {
     const kuberenetesRef = useRef(null)
 
     useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
         const animateContainer = (container, number) => {gsap.set(container, {opacity: 0, y: 200})
         gsap.to(container,  { y: 0, opacity: 1, duration: 2, delay: {number}, scrollTrigger: {
         trigger: container, 
         start: 'top-=120 bottom', 
         end: 'top-=120 bottom',
-        toggleActions: 'play none none reset'
+        toggleActions: 'play reverse none reset'
       }})}
 
          
@@ -34,7 +35,7 @@ const Skills = () => {
           trigger: reactRef.current, 
           start: 'top-=120 bottom', 
           end: 'top-=120 bottom', 
-  
+          // markers: true, 
           toggleActions: 'play none none reset'
         }})
 
@@ -73,17 +74,17 @@ const Skills = () => {
 
   return (
     <>
-         <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[75%] max-xl:mt-[3rem]'>
+        <div className='xl:w-[80%] h-[60rem] mx-auto relative max-xl:w-[75%] max-xl:mt-[3rem]'>
         <div className='h-[100%] xl:w-[70%] xl:ml-[21.7rem] max-xl:w-[100%]'>
         <div className='flex flex-col'>
             <div className='flex text-white border border-[#666666] rounded-3xl w-[20%] items-center justify-center gap-x-[0.5rem] py-[0.4rem]' ref={resumeIcon}> 
-              <Image src='/work.svg' alt='home image' height={30} width={18}/>
+              <Image src='/work.svg' alt='home image' height={30} width={18} className='h-auto w-auto'/>
               <p>My Skills</p>
             </div>
             <p className={`text-white text-[50px] leading-tight mt-[2.5rem]`} ref={resumeTitle}>My  
 <span className='text-green-400'> Advantages</span></p>
 
-            <div className='flex space-x-10 flex-wrap'>
+            <div className='flex flex-wrap justify-evenly'>
               <div className='border border-zinc-500 py-[2rem] w-[10rem] h-[15rem] mt-[2rem] flex flex-col items-center justify-center rounded-full' ref={reactRef}>
                 <img src='/Frame 1.png' alt="react.js" className='h-[6rem] w-[6rem] '/>
                 <p className='text-white'>React.js</p>
