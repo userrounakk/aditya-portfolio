@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {useRef, useEffect} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import Button from "@/app/components/Button/Button"
+import Button from "/src/app/components/Button/Button"
 
 const Portfolio = () => {
     const firstPort = useRef(null)

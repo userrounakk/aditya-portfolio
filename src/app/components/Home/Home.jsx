@@ -99,7 +99,7 @@ Welcome to my portfolio! I&apos;m passionate about creating innovative solutions
             </div>
 
             <div className='border border-[#666666] rounded-[70rem] h-[12rem] w-[12rem] mx-[70%] relative'>
-                <Image src='/round-text.png' alt='rounded-text' height={40} width={160} className='absolute top-[0.7rem] left-[1rem] w-auto h-auto' ref={imageProject}/>
+                <Image src='/round-text.png' alt='rounded-text' height={40} width={160} className='absolute top-[0.7rem] left-[1rem]' ref={imageProject}/>
                 <Image src='/down.svg' alt='down arrow' height={90} width={40} className='absolute top-[5rem] left-[4.6rem] w-auto h-auto'/>
             </div>  
 
