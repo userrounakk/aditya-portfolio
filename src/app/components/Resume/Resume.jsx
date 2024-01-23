@@ -9,8 +9,8 @@ import ScrollTrigger  from 'gsap/ScrollTrigger'
 const Resume = () => {
 
   const resumeIcon = useRef(null)
-    const resumeTitle = useRef(null) 
-    const present = useRef(null)
+  const resumeTitle = useRef(null) 
+  const present = useRef(null)
   const second = useRef(null)
 
 

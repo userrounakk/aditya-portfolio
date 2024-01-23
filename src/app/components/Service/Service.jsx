@@ -2,22 +2,25 @@
 
 import React from 'react'
 import Image from 'next/image'
-import {useRef, useEffect} from 'react'
+import {useRef, useEffect, useState} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+
+
+// {title: 'Data Structure and Algorithm', content: 'Turning complexity into simplicity, and empowering every line of code with strategic elegance.', project: '74 Leetcode Problems Solved', icon: '/DSA.png'}, {title: 'Devops', content: 'Seamlessly blending development and operations, to create a continuous flow where software evolves with speed, reliability, and resilience.', project: '', icon: '/devops.png' }
 
 const Service = () => {
 
 
-  const special = [{title: 'Web Development', content: 'Where creativity meets functionality, and every line of code paints a picture of innovation.', project: '5 Projects', icon: '/development.png'}, {title: 'Data Structure and Algorithm', content: 'Turning complexity into simplicity, and empowering every line of code with strategic elegance.', project: '74 Leetcode Problems Solved', icon: '/DSA.png'}, {title: 'Devops', content: 'Seamlessly blending development and operations, to create a continuous flow where software evolves with speed, reliability, and resilience.', project: '', icon: '/devops.png' }]
+  const special = [{title: 'Web Development', content: 'Where creativity meets functionality, and every line of code paints a picture of innovation.', project: '5 Projects', icon: '/development.png'}]
 
     const resumeIcon = useRef(null)
     const resumeTitle = useRef(null) 
-    const containerRef = Array(special.length).fill(0).map(() => useRef(null))
+    const containerRef = useRef(null);
 
     
 
-
+4
     useEffect(() => {
 
     gsap.registerPlugin(ScrollTrigger)
@@ -45,9 +48,11 @@ const Service = () => {
         }})
       }
 
-      containerRef.forEach((ref) => {
-        animateSkill(ref.current)
-      })
+      // containerRef.forEach((ref) => {
+      //   animateSkill(ref.current)
+      // })
+
+      animateSkill(containerRef.current);
 
     
     },[])
@@ -66,7 +71,7 @@ const Service = () => {
 <span className='text-green-400'> Strengths</span></p>
 
 {special.map((data, index) => (
-            <div key={index} className='border border-[#666666] hover:border-green-400 rounded-2xl flex flex-col text-white py-[2.5rem] px-[2.5rem] mb-[1rem]' ref={containerRef[index]}>
+            <div key={index} className='border border-[#666666] hover:border-green-400 rounded-2xl flex flex-col text-white py-[2.5rem] px-[2.5rem] mb-[1rem]' ref={containerRef}>
 
                 <div className='flex justify-between'>
                   <p className='text-white text-[24px] max-lg:text-[21px]'>{data.title}</p>

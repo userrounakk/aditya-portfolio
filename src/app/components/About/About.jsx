@@ -42,7 +42,7 @@ const About = () => {
               <p className='max-lg:text-[14px]'>About</p>
             </div>
 
-            <p className={`text-white text-[50px] leading-tight max-lg:text-[40px]`} ref={aboutText}>Let's embark on a journey of turning ideas into extraordinary<span className='text-green-400'> digital experiences</span></p>
+            <p className={`text-white text-[50px] leading-tight max-lg:text-[40px]`} ref={aboutText}>Let&apos;s embark on a journey of turning ideas into extraordinary<span className='text-green-400'> digital experiences</span></p>
 
              <p className='text-[#999999] w-[80%] leading-[2rem] text-[18px]' ref={aboutContent}>The dynamic nature of technology inspires me to stay updated with the latest trends and advancements in web development. I actively seek opportunities for learning and professional development, ensuring that my skills align with industry standards and best practices..</p>
   

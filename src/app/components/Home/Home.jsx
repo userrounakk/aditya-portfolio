@@ -41,11 +41,11 @@ const Home = () => {
               <p className='font-bold text-[2.3rem] text-white '>Aditya</p>
               <p className='w-[45%] leading-tight text-end text-white text-[13px]'>Full Stack Web Developer</p>
           </div>
-          <Image src="/aditya.png" alt='profile picture' width={260} height={10} className='rounded-3xl w-auto h-auto'/>
+          <Image src="/aditya.png" alt='profile picture' width={260} height={10} className='rounded-3xl w-auto h-auto' priority/>
           <div>
             <p className='text-white text-[23px]'>Based in Janakpur, Nepal</p>
           </div>
-          <p className='text-zinc-500 text-[14px] text-center'>©️ 2024 Aditya. All Rights Reserved</p>
+          <p className='text-zinc-500 text-[14px] text-center'>&copy; 2024 Aditya. All Rights Reserved</p>
 
           <ul className='flex justify-between w-[70%]'>
             {media.map((icon, index) => (
@@ -86,14 +86,14 @@ const Home = () => {
             </div>
 
             <div>
-              <p className={`text-white text-[76px] leading-tight max-lg:text-[55px]`}>I'm<span className='text-green-400'> Aditya</span>,
+              <p className={`text-white text-[76px] leading-tight max-lg:text-[55px]`}>I&apos;m<span className='text-green-400'> Aditya</span>,
               <br/>a Full Stack Developer</p>
             </div>
 
             <div>
               <p className='text-[#999999] w-[60%] text-[17px]'>
 
-Welcome to my portfolio! I'm passionate about creating innovative solutions that leave a lasting impression. As a Web Developer, I bring a unique blend of creativity and expertise to every project.
+Welcome to my portfolio! I&apos;m passionate about creating innovative solutions that leave a lasting impression. As a Web Developer, I bring a unique blend of creativity and expertise to every project.
 
 </p>
             </div>
